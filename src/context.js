@@ -5,7 +5,7 @@ import React from "react";
 const AppContext = React.createContext();
 
 export const AppProvider = ({ children }) => {
-  const [value, setValue] = useState("athens");
+  const [value, setValue] = useState("hillsboro");
   const [current, setCurrent] = useState(null);
   const [forecast, setForecast] = useState([]);
   const [location, setLocation] = useState(null);
