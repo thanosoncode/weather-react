@@ -321,5 +321,15 @@ body {
   .hour-cards {
     gap: 10px;
     margin-bottom: 2rem;
+    display: inline-flex;
+  }
+  .result {
+    margin: 0.5rem;
+  }
+  .info {
+    text-align: center;
+  }
+  table {
+    padding: 0.5rem;
   }
 }
