@@ -81,7 +81,7 @@ body {
 }
 
 .search {
-  margin: 2rem 0;
+  margin-top: 1rem;
 }
 
 .text-form {
@@ -237,7 +237,7 @@ body {
 }
 
 .hour-card {
-  flex: 1;
+  flex: 1 0 50%;
   background: var(--primary);
   display: flex;
   justify-content: space-between;
@@ -340,3 +340,4 @@ body {
     display: grid;
   }
 }
+
