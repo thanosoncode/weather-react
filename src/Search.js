@@ -18,7 +18,7 @@ const Search = () => {
           <span className="search-icon">
             <FaSearch />
           </span>
-          <button type="button" className="search-btn">
+          <button type="submit" className="search-btn">
             {" "}
             Search
           </button>
