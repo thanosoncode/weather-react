@@ -1,10 +1,9 @@
 import React from "react";
 import { useGlobalContext } from "./context";
-import Forecast from "./Forecast";
 
 const Location = () => {
   const { location } = useGlobalContext();
-  const { country, region, name, localtime } = location;
+  const { country, name, localtime } = location;
 
   const getDayToday = () => {
     const days = [

@@ -138,6 +138,9 @@ body {
   border: 1px solid #6a85b6;
 }
 
+table {
+  letter-spacing: 1px;
+}
 /* Loading */
 
 .loading {
@@ -268,14 +271,20 @@ body {
 }
 
 .clear {
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(
+    to top,
+    #0c3483 0%,
+    #a2b6df 100%,
+    #6b8cce 100%,
+    #a2b6df 100%
+  );
 }
 .sunny {
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
 .cloudy {
-  background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+  background-image: linear-gradient(-45deg, #ffc796 0%, #ff6b95 100%);
 }
 
 .snow {

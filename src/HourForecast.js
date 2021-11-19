@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import { useGlobalContext } from "./context";
 
 const HourForecast = () => {
-  const { forecast, location, current, getClass } = useGlobalContext();
+  const { forecast, current, getClass } = useGlobalContext();
+  const [hoursToShow, setHoursToShow] = useState([]);
 
-  const currentHour = current.last_updated.split(" ")[1].substr(0, 2);
-  const hoursLeft = forecast[0].hour.slice(currentHour);
+  const getHoursToShow = () => {
+    const currentHour = current.last_updated.split(" ")[1].substr(0, 2);
+    const hoursLeft = forecast[0].hour.slice(currentHour);
 
-  const hoursLeftEveryTwo = hoursLeft
-    .filter((hour) => hoursLeft.indexOf(hour) % 2 == 0)
-    .slice(1);
+    const hoursToHave = 12;
+    const nextDayHoursNeeded = hoursToHave - hoursLeft.length;
+    const nextDayHours = forecast[1].hour.slice(0, nextDayHoursNeeded);
+
+    const totalHours = [...hoursLeft, ...nextDayHours];
+
+    const hoursEveryTwo = totalHours.filter(
+      (hour) => totalHours.indexOf(hour) % 2
+    );
+    return hoursEveryTwo;
+  };
+
+  useEffect(() => {
+    setHoursToShow(getHoursToShow());
+  }, []);
 
   return (
     <div className="hour-cards">
-      {hoursLeftEveryTwo.slice(0, 6).map((hour, index) => {
+      {hoursToShow.slice(0, 6).map((hour, index) => {
         return (
           <div
             key={index}

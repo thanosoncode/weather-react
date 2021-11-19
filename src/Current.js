@@ -16,26 +16,28 @@ const Current = () => {
             <p>{condition.text}</p>
           </div>
           <table>
-            <tr>
-              <td>Feels like</td>
-              <td style={{ textAlign: "right" }}>
-                <strong>{feelslike_c}°C</strong>
-              </td>
-            </tr>
-            <tr>
-              <td>Humidity</td>
-              <td style={{ textAlign: "right" }}>
-                <strong>{humidity}%</strong>
-              </td>
-            </tr>
-            <tr>
-              <td>Wind</td>
-              <td>
-                <strong>
-                  {wind_dir} {wind_kph}kph
-                </strong>
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>Feels like</td>
+                <td style={{ textAlign: "right" }}>
+                  <strong>{feelslike_c}°C</strong>
+                </td>
+              </tr>
+              <tr>
+                <td>Humidity</td>
+                <td style={{ textAlign: "right" }}>
+                  <strong>{humidity}%</strong>
+                </td>
+              </tr>
+              <tr>
+                <td>Wind</td>
+                <td>
+                  <strong>
+                    {wind_dir} {wind_kph}kph
+                  </strong>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       )}
